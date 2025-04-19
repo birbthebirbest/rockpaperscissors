@@ -6,10 +6,21 @@
         else if (choice <= 0.5 && choice > 0.25)
         return "Paper";
         else
-        return "Scissors"
-;
+        return "Scissors";
 };
-console.log(getComputerChoice())
+    function getHumanChoice(){
+        let humanChoice = prompt("Rock, Paper, Scissors")
+        if (humanChoice === "Rock")
+            return "You Win!";
+        else if (humanChoice === "Paper")
+            return "You Lose!";
+        else if (humanChoice === "Scissors")
+            return "It's a tie!";
+        else   
+            return "Enter a valid choice";
+    }
+console.log(getHumanChoice())
+
 
 
 
