@@ -1,25 +1,36 @@
 <script>
     function getComputerChoice(){
-        let choice = Math.random;
-        if (choice <= 0.25)
+        let comChoice = Math.random();
+        if (comChoice <= 0.25)
          return "Rock";
-        else if (choice <= 0.5 && choice > 0.25)
+        else if (comChoice <= 0.5 && comChoice > 0.25)
         return "Paper";
-        else
+        else if (comChoice > 0.5)
         return "Scissors";
+        else
+        return "Error";
+        
 };
     function getHumanChoice(){
-        let humanChoice = prompt("Rock, Paper, Scissors")
-        if (humanChoice === "Rock")
-            return "You Win!";
-        else if (humanChoice === "Paper")
-            return "You Lose!";
-        else if (humanChoice === "Scissors")
-            return "It's a tie!";
+        let manChoice = prompt("Rock, Paper, Scissors")
+        if (manChoice === "Rock" || "rock")
+            return "Rock";
+        else if (manChoice === "Paper" || "paper")
+            return "Paper";
+        else if (manChoice === "Scissors" || "scissors")
+            return "Scissors";
         else   
             return "Enter a valid choice";
     }
-console.log(getHumanChoice())
+    var computerScore = 0;
+    var humanScore = 0;
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    function playRound(humanChoice, computerChoice){
+    
+    }
+
+
 
 
 
