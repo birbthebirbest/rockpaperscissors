@@ -13,26 +13,47 @@
 };
     function getHumanChoice(){
         let manChoice = prompt("Rock, Paper, Scissors")
-        if (manChoice === "Rock" || "rock")
-            return "Rock";
-        else if (manChoice === "Paper" || "paper")
-            return "Paper";
-        else if (manChoice === "Scissors" || "scissors")
-            return "Scissors";
-        else   
-            return "Enter a valid choice";
+        if (manChoice == "Rock" || manChoice == "rock"){
+            return "Rock";}
+        else if (manChoice == "Paper" || manChoice == "paper"){
+            return "Paper";}
+        else if (manChoice == "Scissors" || manChoice == "scissors"){
+            return "Scissors";}
+        else   {
+            return "Enter a valid choice";}
     }
     var computerScore = 0;
     var humanScore = 0;
-    let humanChoice = getHumanChoice();
-    let computerChoice = getComputerChoice();
-    function playRound(humanChoice, computerChoice){
     
+    function playRound() {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        if (humanChoice === "Enter a valid choice") {
+            return "Invalid input. Please enter Rock, Paper, or Scissors.";
+        }
+
+        if (humanChoice === computerChoice) {
+            return "It's a tie!";
+        } 
+        else if (
+            (humanChoice === "Rock" && computerChoice === "Scissors") ||
+            (humanChoice === "Paper" && computerChoice === "Rock") ||
+            (humanChoice === "Scissors" && computerChoice === "Paper")
+        ) {
+            return ("You Win!");
+        } 
+        else {
+            return ("You Lose :(");
+        }
+
+        
+}
+    console.log(playRound());
+    console.log(humanScore);
+    function playGame() {
+
     }
-
-
-
-
+    
 
 
 </script>
