@@ -22,8 +22,7 @@
         else   {
             return "Enter a valid choice";}
     }
-    var computerScore = 0;
-    var humanScore = 0;
+    
     
     function playRound() {
         let humanChoice = getHumanChoice();
@@ -45,11 +44,27 @@
         else {
             return ("You Lose :(");
         }
-
+    }
+    
+    function updateScores() {
+        let result = playRound();
+        let computerScore = 0;
+        let humanScore = 0;
+        if (result === "You Win!"){
+                return (humanScore += 1)
+            }
+        else if (result === "You Lose :("){
+                return (computerScore += 1)
+            }
+        else {
+                return null
+            }
+        }
         
-}
+        
+
     console.log(playRound());
-    console.log(humanScore);
+    console.log();
     function playGame() {
 
     }
