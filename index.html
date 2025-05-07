@@ -46,10 +46,10 @@
         }
     }
     
+    let computerScore = 0;
+    let humanScore = 0;
     function updateScores() {
         let result = playRound();
-        let computerScore = 0;
-        let humanScore = 0;
         if (result === "You Win!"){
                 return (humanScore += 1)
             }
@@ -60,14 +60,36 @@
                 return null
             }
         }
-        
-        
 
-    console.log(playRound());
-    console.log();
-    function playGame() {
+    
+    
 
+    function playGame(){
+        round1 = 
+        updateScores();
+        round2 = 
+        updateScores();
+        round3 = 
+        updateScores();
+        round4 = 
+        updateScores();
+        round5 =
+        updateScores();
+        if (humanScore > computerScore){
+            return "You win! Congrats!"
+        }
+        else if (humanScore < computerScore){
+            return "You lose. Better luck next time!"
+        }
+        else {
+            return "Error"
+        }
+       
     }
+    console.log(playGame());
+    console.log("Your Score: " + humanScore);
+    console.log("Opponent's Score: " + computerScore);
+
     
 
 
